@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>DeleteValue</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="nori">
+	<script type="text/javascript">
+	 /* var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-4011945-3']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();*/
+	</script>
+	<link rel="stylesheet" href="source/style.css">
+</head>
+ 
+<body>
+
+	<form action="" method="" id="form">
+		<fieldset>
+			<legend>フォーム</legend>
+			<dl id="elms">
+				<dt>First Name</dt>
+				<dd><input type="text" id="firstname" placeholder="Enter First Name" value=""></dd>
+				<dt>Last Name</dt>
+				<dd><input type="text" id="lastname" placeholder="Enter Last Name" value=""></dd>
+				<dt>Email</dt>
+				<dd><input type="email" id="email" placeholder="Enter Email" value=""></dd>
+				<dt>Password</dt>
+				<dd><input type="password" id="password" placeholder="Enter Password" value=""></dd>
+				<dt>Retype Pass</dt>
+				<dd><input type="password" id="repass" placeholder="Retype Pass" value=""></dd>
+				<dt>Phone Number</dt>
+				<dd><input type="tel" id="tel" placeholder="Phone Number (Optional)" value=""></dd>
+			</dl>
+		</fieldset>
+		<p class="submit"><input type="submit" value="Submit"></p>
+	</form>
+
+	<script src="source/deleteValue.js"></script>
+	<script>
+		GG.smartDeleteValue("#elms input");
+	</script>
+</body>
+</html>

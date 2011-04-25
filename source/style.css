@@ -1,0 +1,111 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+
+
+
+fieldset {
+	border: none;
+}
+
+	fieldset legend {
+		display: none;
+	}
+
+dl {
+	width: 100%;
+	font-family: sans-serif;
+}
+
+	dl dt,
+	dl dd {
+		float: left;
+		border-bottom: solid #e0e0e0 1px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 12px;
+	}
+
+	dl dt {
+		xclear: left;
+		padding: 0 1%;
+		width: 30%;
+		color: #495f8d;
+		text-align: right;
+	}
+
+	dl dd {
+		padding: 0 1%;
+		width: 66%;
+	}
+
+		dl dd input {
+			border: none;
+			width: 90%;
+			background: none;
+			-webkit-appearance: none;
+			font-size: 16px;
+		}
+
+	p.submit {
+		margin-top: 10px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	input[type=submit] {
+		-webkit-border-radius: 10px;
+		border: solid #666 1px;
+		width: 90%;
+		height: 40px;
+		line-height: 40px;
+		color: #fff;
+		background: #555;
+		-webkit-appearance: none;
+		font-size: 18px;
+	}
