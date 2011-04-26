@@ -5,7 +5,7 @@
  * @copyright : 5509 (http://5509.me/)
  * @license   : The MIT License
  * @link      : http://5509.me/log/deletevalue
- * @modified  : 2011/04/25 01:09:26.
+ * @modified  : 2011/04/26 10:00:26.
  *
  * for iOS and Android?
  */
@@ -97,26 +97,6 @@
 			opacity            : _opts.opacity
 		});
 
-		bind(
-			d,
-			"orientationchange",
-			function() {
-				var elm = _this.elm;
-				_this.offset = {
-					y: elm.offsetTop,
-					x: elm.offsetLeft
-				};
-				_this.size = {
-					h: elm.offsetHeight,
-					w: elm.offsetWidth
-				};
-				cssStyle(_this.btn, {
-					top  : _this.offset.y + _opts.topAdj + "px",
-					left : _this.offset.x + _this.size.w + _opts.leftAdj - parseInt(_opts.width) + "px"
-				});
-			}
-		)
-
 		this.hideBtn();
 		this.bind();
 	}
@@ -149,7 +129,9 @@
 		 * @method
 		 */
 		bind: function() {
-			var _this = this;
+			var _this = this,
+				_opts = this.options;
+			// button tap
 			bind(
 				this.btn,
 				"touchstart",
@@ -157,7 +139,7 @@
 					_this.deleteValue();
 				}
 			);
-
+			// focusing input
 			bind(
 				this.elm,
 				"focus",
@@ -177,12 +159,32 @@
 					}());
 				}
 			);
-			
+			// bluring input
 			bind(
 				this.elm,
 				"blur",
 				function() {
 					_this.timer = false;
+				}
+			);
+			// adjusting position
+			bind(
+				d,
+				"orientationchange",
+				function() {
+					var elm = _this.elm;
+					_this.offset = {
+						y: elm.offsetTop,
+						x: elm.offsetLeft
+					};
+					_this.size = {
+						h: elm.offsetHeight,
+						w: elm.offsetWidth
+					};
+					cssStyle(_this.btn, {
+						top  : _this.offset.y + _opts.topAdj + "px",
+						left : _this.offset.x + _this.size.w + _opts.leftAdj - parseInt(_opts.width) + "px"
+					});
 				}
 			);
 		}
